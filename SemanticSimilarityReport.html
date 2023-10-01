@@ -2,15 +2,81 @@
 <html>
 
 <head>
-    <title>My Research Report</title>
+    <title>Semantic Similarity Report 1</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 </head>
 
 <body>
-    <h1>Research Report</h1>
+    <h1>Examining Semantic Similarity of Select Tarafs</h1>
 
     <section>
         <h2>Introduction</h2>
-        <p>This is the introduction section of my research report.</p>
+        <p>Hadith are reports of the Prophet ﷺ which express a statement, a action, or tacit approval of an action. Hadith are separated into
+        two parts: the isnad, or the chain of narrators starting from the collector of the hadith to the Prophet ﷺ, and the matn, or the actual content
+        of the report. Hadith are stored in collections - there are genres of collections guided with a specific aim. For example,
+        Sunan are collections organized by topics within legal jurisprudence. Musnads are books organized by the original narrating figure (Kamali 2009).
+        Consult Hashim Kemali's TextBook in Hadith Studies or Sh. Furhan Zubairi's Introduction to Hadith Studies for a exhaustive list and description of
+        types of hadith collections. Hadith that show up in these collections might have slight variations. These variations could be a few syllable changes,
+        or some contextual information about the hadith, or conversations before and after what is considered the main part of the matn. The general report where 
+        all varations of a hadiths fall under is called a taraf. A single taraf is composed of numerous hadith that relate this report - each hadith has a 
+        variety of isnads. This is the hierarchal scheme that will be used in this article. Tarafs have been classified manually, by X. The 
+        methodology is relatively unknown. In order to explore the nature of taraf classification and textual differences within hadith, we aim
+        to incorporate models and techniques within Natural Language Processing. 
+
+
+        Natural Language Processing intersects the field of computer science and linguistics. It involves programming and designing algorithims to
+        manipulate speech, analyze and extract contextual information within texts, and more generally, the language itself. NLP tasks involve
+        statistical techniques and Machine Learning Models to process tasks. More recently, Neural Networks are used to extract linguistic information.
+        Neural Networks are not directly analytical - using numerical algorithms to manipulate and model data. THis allows it to work with large datasets,
+        giving it the potential to extract enough information to represent the nuances of a language. The process of NLP involves extracting texts, representing
+        them numerically, and using statistical models and Neural Networks to process a set of tasks.
+        Tasks can include reognizing text from images, speech recognition, Sentiment Analysis, Semantic Similarity, translation, and more. Languages are so significant
+        that numerically representing every element of a language without preparation will prevent models to successsfully retain relevent contextual information of a text.
+        Words that have similar meaning, or are related in terms of syntax need to be accounted for - this would allow models to successfully process important
+        information in a text. The process of preparing data for NLP tasks is called pre-processing. Steps for pre-processing texts can include splitting words and puncutation (tokenization),
+        removing stop words or words that carry little semantic meaning, orthographic normalization, lemnazation, etc. Our aim is to use NLP to analyze different tarafs
+        and 
+
+
+
+
+        
+        The goal of of this study is to examine the relationship between Taraf Classification and Semantic Similarity. 
+        
+        EDA:
+        First, I randomly sample
+        30 tarafs that has at least 30 hadith , but less than 200 hadith. The reason for 30 hadith is that I do not want a similarity score
+        distribution to be sensitive by having a small sample size. The reason for a 200 hadith maximum is because of computational cost.
+        I first calculate similarity matrices for all 10 tarafs, using the 5 similarity scores described. I retrieve similarity score distributions,
+        and display them along side Gaussian Kernal Density Plots. I then sample from each taraf, and combine them into one data set, retrieving
+        a similarity matrix and similarity score distributions for all 5 metrics. 
+
+        For each metric i have modeled a most likely probability distribution using AIC and BIC.
+
+
+        Modeling:
+
+        The first task will be to determine which metric is more successfull in organizing hadith into tarafs. I first calculate a similarity matrix
+        for the sample combined, using each of the 5 metrics. then i use clustering algorithms to group into 10 clusters or let the algorithm decide.
+        Then i will use evaluation metrics to determine how well each model grouped hadith into tarafs. 
+
+        A subsidiary approach to the first task is to embedd hadith using transformers. then , use a variety of techniques to reduce data to 2 dimensions
+        then cluster and evaluate or work from there.
+
+        The second task is to use the same idea with supervised learning (in small scale). Ill grab tarafs with at least 200 hadith each, then split, into training and test data
+        then use different ML models to predict taraf labels. ill be using a variety of evaluation metrics for this as well.
+         
+
+
+
+
+
+
+
+    </p>
     </section>
 
     <section>
@@ -19,7 +85,7 @@
         <p>In this section, we will analyze the data and present the results using Plotly graphs.</p>
 
         <h3>Graph 1: Sales Over Time</h3>
-        <iframe width="600" height="400" src="C:\Users\rashi\Downloads\similarity_maxtrix_taraf5794.html"></iframe>
+        <iframe width="600" height="400" src="https://raw.githubusercontent.com/FDSRashid/Taraf_Semantic_Similarity/master/Temp_Semantic_Similarity_Storage/Visuals/distribution_similarity_1258_CS.html"></iframe>
         <p>Caption for Graph 1: This graph shows the sales trends over time.</p>
 
         <h3>Graph 2: Product Distribution</h3>
